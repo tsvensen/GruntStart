@@ -1,0 +1,112 @@
+#!/usr/bin/env node
+
+var smushit = require('./smushit')
+  , util = require('util')
+  , Persist = require('./lib/persist').Persist
+  , persist = new Persist(__dirname + '/persist.json');
+
+var responses = {
+	error: function (message) {
+		util.puts('Error occurred: ' + message);
+	},
+	help: function () {
+		util.puts([
+			'Usage: smushit file1 file2 file3',
+			'Smash your images down to size. smushit uses !Yahoo online Smush.it web service',
+			'to reduce your image size.',
+			'',
+			'(Note: due to the way the args are parsed, two hyphens -- are required after',
+			' binary flags if they appear before file paths)',
+			'',
+			'Options:',
+			'',
+			' General:',
+			'  -v, --verbose		verbose mode',
+			'',
+			' Traversing:',
+			'  -R, --recursive	scan directories recursively',
+			'',
+			' Output:',
+			'  -o, --output		the path to save',
+			'',
+			' Other:',
+			'  -h, --help		print this help page',
+			'  --version		print program version',
+			'',
+			' Examples:',
+			'   Single File',
+			'    smushit image.png',
+            '',
+			'   Single Directory',
+			'    smushit /var/www/mysite.com/images/products/backgrounds',
+            '',
+			'   Multiple Files',
+			'    smushit foo.png bar.png baz.png qux.png',
+            '',
+			'   Recursive Directory',
+			'    smushit -R -- /var/www/mysite.com/images',
+			''
+		].join('\n'));
+	},
+	report: function () {
+		
+	},
+	version: function () {
+		util.puts('smushit v0.3.0');
+	}
+};
+
+function respond (type) {
+	responses[type].call();
+}
+
+var argv = require('optimist').argv;
+
+if (argv.help || argv.h) {
+	respond('help');
+} else if (argv.version) {
+	respond('version');
+} else if (argv.c || argv.config){
+	var s = argv.c || argv.config;
+	
+	if(s === true){
+		persist.each(function(key, value){
+			console.log(' smushit config: %s = %s ', key, value);
+		});
+		return;
+	}
+	s = s.split('=');
+	var	key = s[0],
+		value = s[1];
+	
+	if(value == undefined){
+		console.log(' smushit config: %s = %s ', key, persist.getItem(key));
+	}else if(value === ''){
+		persist.removeItem(key);
+		console.log(' smushit delete config key: %s', key);
+	}else{
+		persist.setItem(key, value);
+		console.log(' smushit config: %s = %s ', key, persist.getItem(key));
+	}
+}else if(argv._.length) {
+	var settings = {};
+
+	if (argv.R || argv.recursive) {
+		settings.recursive = true;
+	}
+
+	if (argv.v || argv.verbose) {
+		settings.verbose = true;
+	}
+
+	if(argv.o || argv.output){
+		settings.output = argv.o || argv.output;
+	}
+
+	settings.service = persist.getItem('service');
+	
+	smushit.smushit(argv._, settings);
+
+} else {
+	respond('help');
+}
