@@ -72,7 +72,9 @@ nav a:hover { color: #A792DD; }
   border-radius: 9px;
 }
 
-.btn:hover {
-  color: #F7F7F7;
-  background: #84BEDB;
-}
+.btn:link,
+.btn:visited,
+.btn:hover,
+.btn:active { color: #F7F7F7; }
+
+.btn:hover { background: #84BEDB; }
