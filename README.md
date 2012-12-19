@@ -1,7 +1,7 @@
 # GruntStart
-A Grunt-enabled head-start with the H5BP, jQuery, Modernizr, and Respond. The builing blocks to immediately get started with [Grunt](http://gruntjs.com/) to optimize web projects.
+A Grunt-enabled head-start with the H5BP, jQuery, Modernizr, and Respond. The builing blocks to quickly get started with [Grunt](http://gruntjs.com/) to create an optimized website.
 
-To lint, minify and concatentate CSS and Javascript and provide simple lossless image compression throughout a project build.
+Lint, minify and concatentate CSS and Javascript and provide simple lossless image compression throughout a project build.
 
 * * *
 #### Created by [Tim Svensen](http://timsvensen.com) (follow [@tsvensen](https://twitter.com/tsvensen))
@@ -17,12 +17,12 @@ To lint, minify and concatentate CSS and Javascript and provide simple lossless 
 
 ## Quick Start
 1. Clone or [download](https://github.com/tsvensen/gruntstart/archive/master.zip) <strong>Grunt</strong>Start
-2. Run grunt watch from the command line within the project
-3. Start building your project
+2. Run <code>grunt watch</code> from the command line within the project directory
+3. Build your project
 5. Keep tabs on the watch task output as custom CSS and Javascript files are saved
 6. When going to production make sure to use the custom Modernizr build, only testing for exactly what you need. See /js/vendor/
 
-Make sure to checkout index.html to
+Take a closer look at index.html to
 * optionally use the non-minified CSS and Javascript for development
 * optionally use Modernizr alone without Respond.js, concatenated and minified
 
@@ -58,7 +58,7 @@ For example, jQuery lives within /vendor/ so it's only loaded once and only load
 * <code>grunt minify</code> will run the default task above and compress images with Yahoo! [SmushIt](http://www.smushit.com/ysmush.it/).
 * <code>grunt watch</code> is not a custom task, but inteded to run while developing to see live linting and minification results.
 
-Grunt watch is truely where the power of Grunt shines as the default task is ran after each watched file is changed. See the quick tutorial below to learn more.
+Grunt watch is truly where the power of Grunt shines as the default task is ran after each watched file is changed. See the quick tutorial below to learn more.
 
 #### Understanding The Watch Task
 1. Open up a command line instance and navigate to the project directory where Grunt is set up.
