@@ -60,3 +60,19 @@ nav a:hover { color: #A792DD; }
   margin-top: 5px;
 }
 
+.btn {
+  display: inline-block;
+    *display:block; zoom:1;
+  color: #F7F7F7;
+  background: #43B8F2;
+  margin: 0 .1em;
+  padding: .2em .5em;
+
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+}
+
+.btn:hover {
+  color: #F7F7F7;
+  background: #84BEDB;
+}
