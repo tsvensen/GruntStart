@@ -138,7 +138,10 @@ h1 {
                2px  2px 5px #777777;
 }
 
+ul,
 p { margin: 0.5em 0 1.5em; }
+
+p + ul { margin-top: -1em }
 
 
 #wrapper {
