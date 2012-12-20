@@ -1,7 +1,7 @@
 # GruntStart
-A Grunt-enabled head-start with the H5BP, jQuery, Modernizr, and Respond. The builing blocks to quickly get started with [Grunt](http://gruntjs.com/) to create an optimized website.
+A Grunt-enabled head-start with the H5BP, jQuery, Modernizr, and Respond. The building blocks to quickly get started with [Grunt](http://gruntjs.com/) to create an optimized website.
 
-Lint, minify and concatentate CSS and Javascript and provide simple lossless image compression throughout a project build.
+Lint, minify and concatenate CSS and Javascript and provide simple lossless image compression throughout a project build.
 
 * * *
 #### Created by [Tim Svensen](http://timsvensen.com) (follow [@tsvensen](https://twitter.com/tsvensen))
@@ -56,7 +56,7 @@ For example, jQuery lives within /vendor/ so it's only loaded once and only load
 
 * <code>grunt</code> or <code>grunt default</code> will lint, concat and minify both CSS and JS by default.
 * <code>grunt minify</code> will run the default task above and compress images with Yahoo! [SmushIt](http://www.smushit.com/ysmush.it/).
-* <code>grunt watch</code> is not a custom task, but inteded to run while developing to see live linting and minification results.
+* <code>grunt watch</code> is not a custom task, but intended to run while developing to see live linting and minification results.
 
 Grunt watch is truly where the power of Grunt shines as the default task is ran after each watched file is changed. See the quick tutorial below to learn more.
 
@@ -66,11 +66,11 @@ Grunt watch is truly where the power of Grunt shines as the default task is ran 
 3. Run <code>grunt watch</code> from the command line. Grunt is now running the watch task and waiting.
 4. Open /css/custom/style.css or /js/custom/scripts.js in your favorite code editor and save the file.
 5. Go back to the command line where watch is running and note the output, the same as running the default task.
-6. Success! The default task is ran everytime a watched file is changed.
+6. Success! The default task is ran every time a watched file is changed.
 
 
 ## GruntStart Architecture Decisions and Advanced Usage
-<strong>Grunt</strong>Start utilizes a flat directory structure within /js/ and /css/ to solve pathing issues for media that arise in CSS or Javascript development. The multiple directories within /css/ and /js/ allow flexibility for a wide range of development approaches.
+<strong>Grunt</strong>Start utilizes a flat directory structure within /js/ and /css/ to solve path-ing issues for media that arise in CSS or Javascript development. The multiple directories within /css/ and /js/ allow flexibility for a wide range of development approaches.
 
 The /css/libs/ and /js/libs/ directories have a z.style.concat.js and z.scripts.concat.js. These are the files concatenated from /custom/ by <strong>Grunt</strong>Start. The 'z' prefix is there to make sure the custom code is included after any plugin or library code. Again this provides flexibility and solves a few problems, one of which is ordering what code comes first.
 

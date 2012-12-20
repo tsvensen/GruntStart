@@ -23,10 +23,10 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
 ::selection { background: #222; color: #fff; text-shadow: none; }
 
 a { color: #43B8F2; text-decoration: none;
-  -webkit-transition: color 0.4s ease-out; 
-     -moz-transition: color 0.4s ease-out; 
-       -o-transition: color 0.4s ease-out; 
-          transition: color 0.4s ease-out; 
+  -webkit-transition: all 0.4s ease-out; 
+     -moz-transition: all 0.4s ease-out; 
+       -o-transition: all 0.4s ease-out; 
+          transition: all 0.4s ease-out; 
 }
 
 a:visited { color: #43B8F2; }
@@ -133,6 +133,7 @@ h1, h2 { margin: 0; }
 
 h1 {
   font-size: 3em;
+  line-height: 1.1;
   text-shadow: 2px  2px 0   #EEEEEE,
               -1px -1px 0   #EEEEEE,
                2px  2px 5px #777777;
@@ -173,7 +174,7 @@ nav a:hover { color: #A792DD; }
 
 #author {
   overflow: hidden;
-  background: #EEE;
+  background: #E9E9E9;
   margin: 0 -12.5% 1.5em;
   padding: 2% 12.5%;
 }
@@ -192,6 +193,7 @@ nav a:hover { color: #A792DD; }
   display: inline-block;
     *display:block; zoom:1;
   color: #F7F7F7;
+  text-shadow: -1px -1px 1px #777;
   background: #43B8F2;
   margin: 0 .1em;
   padding: .2em .5em;
@@ -204,5 +206,4 @@ nav a:hover { color: #A792DD; }
 .btn:visited,
 .btn:hover,
 .btn:active { color: #F7F7F7; }
-
-.btn:hover { background: #84BEDB; }
+.btn:hover  { background: #573558; }
