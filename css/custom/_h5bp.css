@@ -23,10 +23,10 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
 ::selection { background: #222; color: #fff; text-shadow: none; }
 
 a { color: #43B8F2; text-decoration: none;
-  -webkit-transition: color 0.4s ease-out; 
-     -moz-transition: color 0.4s ease-out; 
-       -o-transition: color 0.4s ease-out; 
-          transition: color 0.4s ease-out; 
+  -webkit-transition: all 0.4s ease-out; 
+     -moz-transition: all 0.4s ease-out; 
+       -o-transition: all 0.4s ease-out; 
+          transition: all 0.4s ease-out; 
 }
 
 a:visited { color: #43B8F2; }
