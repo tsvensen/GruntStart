@@ -24,7 +24,7 @@ Lint, minify and concatentate CSS and Javascript and provide simple lossless ima
 
 Take a closer look at index.html to
 * optionally use the non-minified CSS and Javascript for development
-* optionally use Modernizr alone without Respond.js, concatenated and minified
+* optionally use Modernizr without Respond.js
 
 
 ## Usage
