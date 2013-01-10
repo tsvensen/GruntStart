@@ -2,12 +2,8 @@
  * scripts.js
  */
 /*global console*/
-(function($) {
+// (function($) {
 
+// your code here
 
-$(document).ready(function() {
-  $('body').css({background: '#F5F5F5'});
-});
-
-
-}(jQuery));
+// }(jQuery));
