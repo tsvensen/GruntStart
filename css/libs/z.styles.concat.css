@@ -891,9 +891,16 @@ p + ul { margin-top: -1em }
 }
 
 nav {
+  float: left;
   background: #000;
-  margin-bottom: 2em;
   text-align: center;
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
