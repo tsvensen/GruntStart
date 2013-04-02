@@ -12,13 +12,14 @@ Lint, minify and concatenate CSS and Javascript and provide simple lossless imag
 * [Smush-It](https://npmjs.org/package/grunt-smushit) Grunt plugin for losslessly compressing PNGs and JPGs
 * HTML5 Boilerplate ([H5BP](http://html5boilerplate.com/)) base CSS with normalize and inspired HTML index page
 * <code>box-sizing: border-box;</code> for all elements
-* Ready to use starter Grunt configuration file
+* Ready to use starter Gruntfile config
 
 
 ## Quick Start
 1. Clone or [download](https://github.com/tsvensen/gruntstart/archive/master.zip) <strong>Grunt</strong>Start
-2. Run <code>grunt watch</code> from the command line within the project directory
-3. Build your project
+2. Run <code>npm install</code> from the command line at the project root to install grunt and grunt plugins
+3. Run <code>grunt watch</code> from the command line within the project directory
+4. Build your project
 5. Keep tabs on the watch task output as custom CSS and Javascript files are saved
 6. When going to production make sure to use the custom Modernizr build, only testing for exactly what you need. See /js/vendor/
 
@@ -30,7 +31,7 @@ Take a closer look at index.html to
 ## Usage
 By default <strong>Grunt</strong>Start will lint, concatenate and minify your CSS and Javascript.
 
-It is assumed [Nodejs](http://nodejs.org/) and [Grunt](http://gruntjs.com/) are installed.
+It is assumed [Nodejs](http://nodejs.org/) with npm is installed. Grunt with dependancies are installed when running <code>npm install</code>.
 
 ### CSS
 <strong>Grunt</strong>Start will lint all CSS within /custom/ then concatenate those into /libs/. The /libs/ directory is then concatenated and minified into /min/ for production use.
@@ -78,13 +79,9 @@ In the future a custom Grunt task could solve this problem. Until then, to gain 
 
 
 ## Project Goal and Future
-Provide a quick and easy solution for developers to lint and minify their code. The goal is to branch and extend this base setup for other starter projects such as Twitter Bootstrap, Foundation and more. Feel free to contribute, Pull Requests will be accepted for improvements to the base setup and framework specific branches.
+Provide a quick and easy solution for developers to lint and minify their code. In the future GruntStart will most likely become a template for scaffolding with <code>grunt init</code>.
 
 Remember, this is a start. From here you can mold and shape it to fit your approach.
-
-
-## Learn Grunt
-Checkout the [Grunt Documentation](https://github.com/gruntjs/grunt#grunt-) and Merrick Christensen's [Grunt workflow article](http://merrickchristensen.com/articles/gruntjs-workflow.html) for a great grunt primer.
 
 
 ## Legal
