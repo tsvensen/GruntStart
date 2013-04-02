@@ -12,7 +12,7 @@ Lint, minify and concatenate CSS and Javascript and provide simple lossless imag
 * [Smush-It](https://npmjs.org/package/grunt-smushit) Grunt plugin for losslessly compressing PNGs and JPGs
 * HTML5 Boilerplate ([H5BP](http://html5boilerplate.com/)) base CSS with normalize and inspired HTML index page
 * <code>box-sizing: border-box;</code> for all elements
-* Ready to use starter Grunt configuration file
+* Ready to use starter Gruntfile config
 
 
 ## Quick Start
