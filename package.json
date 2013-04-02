@@ -1,6 +1,6 @@
 {
-  "name": "gruntstart",
-  "version": "0.2.0",
+  "name": "GruntStart",
+  "version": "1.0.0",
   "description": "A Grunt-enabled head-start with H5BP + jQuery + Modernizr + Respond + box-sizing:border-box;",
   "main": "gruntfile.js",
   "repository": {
