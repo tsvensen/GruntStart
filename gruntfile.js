@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     files: {
-      grunt: ['grunt.js'],
+      grunt: ['gruntfile.js'],
       js:    ['js/custom/*.js'],
       css:   ['css/custom/*.css'],
       img:   ['img']
@@ -118,7 +118,7 @@ module.exports = function(grunt) {
     watch: {
       files: ['<%= files.grunt %>', '<%= files.js %>', '<%= files.css %>'],
       tasks: ['default']
-    },
+    }
   });
 
 
