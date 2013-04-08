@@ -1,4 +1,4 @@
-/*! normalize.css v1.1.0 | MIT License | git.io/normalize */
+/*! normalize.css v1.1.1 | MIT License | git.io/normalize */
 
 /* ==========================================================================
    HTML5 display definitions
@@ -59,16 +59,22 @@ audio:not([controls]) {
    ========================================================================== */
 
 /**
- * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ * 1. Prevent system color scheme's background color being used in Firefox, IE,
+ *    and Opera.
+ * 2. Prevent system color scheme's text color being used in Firefox, IE, and
+ *    Opera.
+ * 3. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
  *    `em` units.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
+ * 4. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
 
 html {
-    font-size: 100%; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-    -ms-text-size-adjust: 100%; /* 2 */
+    background: #fff; /* 1 */
+    color: #000; /* 2 */
+    font-size: 100%; /* 3 */
+    -webkit-text-size-adjust: 100%; /* 4 */
+    -ms-text-size-adjust: 100%; /* 4 */
 }
 
 /**
@@ -553,7 +559,7 @@ body {
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection declarations have to be separate.
+ * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
 
@@ -616,26 +622,6 @@ textarea {
     color: #000;
     padding: 0.2em 0;
 }
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    Helper classes
@@ -739,23 +725,6 @@ textarea {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
@@ -826,7 +795,6 @@ textarea {
         page-break-after: avoid;
     }
 }
-
 /* =============================================================================
    Box Sizing
    Apply a natural box layout model to all elements - http://paulirish.com/2012/box-sizing-border-box-ftw/
